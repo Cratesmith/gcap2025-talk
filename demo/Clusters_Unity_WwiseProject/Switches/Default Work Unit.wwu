@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{47C6982A-388E-43C7-82BE-F894E7F06839}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{47C6982A-388E-43C7-82BE-F894E7F06839}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Switch_FootstepType" ID="{FDEC548A-E463-4521-83C6-5B6B40DE4C9F}">
+					<ChildrenList>
+						<Switch Name="Walk" ID="{D9819AB8-7734-4A0A-88FE-76A9E1D8316B}"/>
+						<Switch Name="Run" ID="{7627738F-4254-48C0-8B6F-8ACBB29DC4A5}"/>
+						<Switch Name="Jump" ID="{F09C8D20-2A9F-4765-972E-D92B24AB4E5D}"/>
+						<Switch Name="Land" ID="{49E10485-63F9-462A-B18A-B18B4F723B60}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -1,0 +1,194 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4119342709",
+    "Type": "Event",
+    "GUID": "{8E4F39B5-300F-44C6-9B8D-2446AD359B16}",
+    "Language": "SFX",
+    "Hash": "{3BD664CC-E44A-68CF-5F6B-1C8DD4A9E67A}",
+    "ObjectPath": "Play_SingleCowMoos",
+    "ShortName": "Play_SingleCowMoos",
+    "Path": "Event/Play_SingleCowMoos.bnk",
+    "Media": [
+     {
+      "Id": "121928061",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_03.wav",
+      "Path": "Media/121928061.wem",
+      "CachePath": "4E/{4EA27152-4C5B-D9E3-75E6-8D0034F40892}.wem"
+     },
+     {
+      "Id": "157517931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_10.wav",
+      "Path": "Media/157517931.wem",
+      "CachePath": "98/{98440A65-94DA-9300-81C2-6265446C369D}.wem"
+     },
+     {
+      "Id": "339324873",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_07.wav",
+      "Path": "Media/339324873.wem",
+      "CachePath": "39/{398911D7-CD90-6D6B-6DD5-8C65A74516D0}.wem"
+     },
+     {
+      "Id": "398551076",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_13.wav",
+      "Path": "Media/398551076.wem",
+      "CachePath": "B0/{B0681B8D-9579-C9F2-CE59-7BA8E0E15E10}.wem"
+     },
+     {
+      "Id": "418479652",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_02.wav",
+      "Path": "Media/418479652.wem",
+      "CachePath": "1D/{1D6935F7-A355-3B1E-3309-F158E9A591B0}.wem"
+     },
+     {
+      "Id": "690211834",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_09.wav",
+      "Path": "Media/690211834.wem",
+      "CachePath": "F0/{F0C459C2-49B3-0BA3-BD63-16021A5114D1}.wem"
+     },
+     {
+      "Id": "709232782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_12.wav",
+      "Path": "Media/709232782.wem",
+      "CachePath": "3E/{3E58B8F8-A7F4-6336-8DE8-09B211E3F348}.wem"
+     },
+     {
+      "Id": "799851670",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_08.wav",
+      "Path": "Media/799851670.wem",
+      "CachePath": "A5/{A54484F9-BAEB-17F3-28D9-DB2305876867}.wem"
+     },
+     {
+      "Id": "814588727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_04.wav",
+      "Path": "Media/814588727.wem",
+      "CachePath": "03/{03391ECC-39B8-1401-3D41-68FF8CD4821B}.wem"
+     },
+     {
+      "Id": "840179209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_06.wav",
+      "Path": "Media/840179209.wem",
+      "CachePath": "F5/{F54929FD-9A0C-7506-5146-3F81F1EA5927}.wem"
+     },
+     {
+      "Id": "844495937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_05.wav",
+      "Path": "Media/844495937.wem",
+      "CachePath": "41/{41F51BCA-9FEC-0B13-3A28-FCCAC2003705}.wem"
+     },
+     {
+      "Id": "861620319",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_01.wav",
+      "Path": "Media/861620319.wem",
+      "CachePath": "CC/{CCB9B351-E39E-E289-2550-61E67CCFB88A}.wem"
+     },
+     {
+      "Id": "876912971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_Cow_Moo_11.wav",
+      "Path": "Media/876912971.wem",
+      "CachePath": "5C/{5C41BF27-09A3-A644-CE3E-E07D189B2983}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4119342709",
+      "Name": "Play_SingleCowMoos",
+      "ObjectPath": "\\Events\\Default Work Unit\\ForKiera\\Play_SingleCowMoos",
+      "GUID": "{8E4F39B5-300F-44C6-9B8D-2446AD359B16}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2900908",
+      "DurationMax": "3.4724717",
+      "MediaRefs": [
+       {
+        "Id": "121928061"
+       },
+       {
+        "Id": "157517931"
+       },
+       {
+        "Id": "339324873"
+       },
+       {
+        "Id": "398551076"
+       },
+       {
+        "Id": "418479652"
+       },
+       {
+        "Id": "690211834"
+       },
+       {
+        "Id": "709232782"
+       },
+       {
+        "Id": "799851670"
+       },
+       {
+        "Id": "814588727"
+       },
+       {
+        "Id": "840179209"
+       },
+       {
+        "Id": "844495937"
+       },
+       {
+        "Id": "861620319"
+       },
+       {
+        "Id": "876912971"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{06388DAC-BDCE-8349-A5D9-EEA82011462E}"
+ }
+}

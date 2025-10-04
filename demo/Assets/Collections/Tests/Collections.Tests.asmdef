@@ -1,0 +1,7 @@
+{
+    "name": "Collections.Tests",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "references":[ "GUID:9f2169dfcf204240baf0b94be5619798" ]
+}

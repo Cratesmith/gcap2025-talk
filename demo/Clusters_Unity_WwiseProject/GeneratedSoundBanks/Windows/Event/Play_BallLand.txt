@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2501062750	Play_BallLand			\Default Work Unit\ForKiera\Play_BallLand	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2582146478	RTPC_Intensity			\Default Work Unit\RTPC_Intensity	
+

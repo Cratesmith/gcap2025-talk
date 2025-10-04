@@ -1,0 +1,122 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4269038391",
+    "Type": "Event",
+    "GUID": "{C638E4B4-84CF-41AE-B387-E0D8F67245C1}",
+    "Language": "SFX",
+    "Hash": "{A4B16757-B584-D274-B3F0-D5CA18149789}",
+    "ObjectPath": "Play_BallKick",
+    "ShortName": "Play_BallKick",
+    "Path": "Event/Play_BallKick.bnk",
+    "Media": [
+     {
+      "Id": "128649939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_02.wav",
+      "Path": "Media/128649939.wem",
+      "CachePath": "3D/{3D5A69E3-41EA-AED7-FDF1-482AD66F2DBD}.wem"
+     },
+     {
+      "Id": "239591485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_05.wav",
+      "Path": "Media/239591485.wem",
+      "CachePath": "90/{905E980B-5632-5CD8-15A1-AAED3F7B9021}.wem"
+     },
+     {
+      "Id": "419640854",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_01.wav",
+      "Path": "Media/419640854.wem",
+      "CachePath": "42/{42345CB2-7FCB-33FF-F3D5-A672A4A4CC33}.wem"
+     },
+     {
+      "Id": "728230733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_04.wav",
+      "Path": "Media/728230733.wem",
+      "CachePath": "EA/{EADABB32-57DD-15A5-11E6-66E34624785C}.wem"
+     },
+     {
+      "Id": "737117159",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_06.wav",
+      "Path": "Media/737117159.wem",
+      "CachePath": "E4/{E4FA8D35-48C3-569D-45FE-6835082FA69D}.wem"
+     },
+     {
+      "Id": "1000827783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_03.wav",
+      "Path": "Media/1000827783.wem",
+      "CachePath": "6F/{6FBEB10F-D0C2-A758-2E9B-24C53C0F8777}.wem"
+     },
+     {
+      "Id": "1067803770",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallHit_07.wav",
+      "Path": "Media/1067803770.wem",
+      "CachePath": "93/{9398B0FE-8244-1EE8-CA00-25DBBEF6C7EF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4269038391",
+      "Name": "Play_BallKick",
+      "ObjectPath": "\\Events\\Default Work Unit\\ForKiera\\Play_BallKick",
+      "GUID": "{C638E4B4-84CF-41AE-B387-E0D8F67245C1}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.45669818",
+      "DurationMax": "0.5297316",
+      "MediaRefs": [
+       {
+        "Id": "128649939"
+       },
+       {
+        "Id": "239591485"
+       },
+       {
+        "Id": "419640854"
+       },
+       {
+        "Id": "728230733"
+       },
+       {
+        "Id": "737117159"
+       },
+       {
+        "Id": "1000827783"
+       },
+       {
+        "Id": "1067803770"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{05629229-6A23-C1A4-861A-67A154E5EBA3}"
+ }
+}

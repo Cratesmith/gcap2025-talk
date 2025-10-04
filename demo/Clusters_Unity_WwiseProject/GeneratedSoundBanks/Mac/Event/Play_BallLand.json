@@ -1,0 +1,466 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2501062750",
+    "Type": "Event",
+    "GUID": "{0068CC5E-94C6-46CE-8A9D-DE5152E7A1E0}",
+    "Language": "SFX",
+    "Hash": "{29C3BEC6-0A08-1EE7-8137-052B83AC6DE6}",
+    "ObjectPath": "Play_BallLand",
+    "ShortName": "Play_BallLand",
+    "Path": "Event/Play_BallLand.bnk",
+    "Media": [
+     {
+      "Id": "33625350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_04.wav",
+      "Path": "Media/33625350.wem",
+      "CachePath": "E9/{E92C055E-44B6-7BB1-BD93-A5E1A7F1EC01}.wem"
+     },
+     {
+      "Id": "46279998",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_01.wav",
+      "Path": "Media/46279998.wem",
+      "CachePath": "8B/{8B0398FC-BA3A-2D38-0521-97366B78CAE0}.wem"
+     },
+     {
+      "Id": "69407858",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_17.wav",
+      "Path": "Media/69407858.wem",
+      "CachePath": "FD/{FD928A4D-5ABA-EE7A-4336-8CA7A32F021C}.wem"
+     },
+     {
+      "Id": "78103090",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_19.wav",
+      "Path": "Media/78103090.wem",
+      "CachePath": "43/{43A24C42-BDFB-E2B7-E4B4-D703FD0B744D}.wem"
+     },
+     {
+      "Id": "103368974",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_03.wav",
+      "Path": "Media/103368974.wem",
+      "CachePath": "35/{35EDDF93-FC98-F95C-E9CE-961377BA5E52}.wem"
+     },
+     {
+      "Id": "124083332",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_25.wav",
+      "Path": "Media/124083332.wem",
+      "CachePath": "C0/{C019BFD1-269E-F854-F078-1E955386C1C0}.wem"
+     },
+     {
+      "Id": "126157330",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_28.wav",
+      "Path": "Media/126157330.wem",
+      "CachePath": "3B/{3B82FB54-8631-9E72-AE98-8FB571BD65C1}.wem"
+     },
+     {
+      "Id": "127637120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_27.wav",
+      "Path": "Media/127637120.wem",
+      "CachePath": "F5/{F57B5CC5-D597-8C68-A9CB-0795D89FE3A6}.wem"
+     },
+     {
+      "Id": "139144504",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_08.wav",
+      "Path": "Media/139144504.wem",
+      "CachePath": "D0/{D062A6CF-A76D-E1B2-643E-18FB804363BE}.wem"
+     },
+     {
+      "Id": "141955767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_29.wav",
+      "Path": "Media/141955767.wem",
+      "CachePath": "9D/{9D32D28F-124A-BF0D-DEF3-47E076DB072E}.wem"
+     },
+     {
+      "Id": "150198274",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_15.wav",
+      "Path": "Media/150198274.wem",
+      "CachePath": "C2/{C2CF5951-178E-8508-1DB7-3C64691448E2}.wem"
+     },
+     {
+      "Id": "164228323",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_34.wav",
+      "Path": "Media/164228323.wem",
+      "CachePath": "7D/{7DDAA932-DF6D-E86F-C0AD-B3548582E2CF}.wem"
+     },
+     {
+      "Id": "199386930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_32.wav",
+      "Path": "Media/199386930.wem",
+      "CachePath": "1A/{1AA3883F-D556-F093-973A-839918E7D8EA}.wem"
+     },
+     {
+      "Id": "238267983",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_05.wav",
+      "Path": "Media/238267983.wem",
+      "CachePath": "9B/{9B496AAF-BA4F-CDA5-FEE2-4279827AD621}.wem"
+     },
+     {
+      "Id": "355660534",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_12.wav",
+      "Path": "Media/355660534.wem",
+      "CachePath": "63/{632B9129-3488-7D31-AC30-6C796ADAFED5}.wem"
+     },
+     {
+      "Id": "464403998",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_26.wav",
+      "Path": "Media/464403998.wem",
+      "CachePath": "A1/{A113F4E2-61C6-2DC3-8107-7D7D57045CD2}.wem"
+     },
+     {
+      "Id": "482458783",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_31.wav",
+      "Path": "Media/482458783.wem",
+      "CachePath": "BF/{BF8E2F8C-01B0-1E89-418E-3FE39E5C86F9}.wem"
+     },
+     {
+      "Id": "509966639",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_16.wav",
+      "Path": "Media/509966639.wem",
+      "CachePath": "91/{91919225-AC4D-7047-8D7E-D98387479EC8}.wem"
+     },
+     {
+      "Id": "512476426",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_30.wav",
+      "Path": "Media/512476426.wem",
+      "CachePath": "9F/{9F92DD70-1BD3-FCD3-E380-53CFB9480B4A}.wem"
+     },
+     {
+      "Id": "537514308",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_07.wav",
+      "Path": "Media/537514308.wem",
+      "CachePath": "8A/{8A497262-6C88-493C-1786-0F24052C15DB}.wem"
+     },
+     {
+      "Id": "595125648",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_11.wav",
+      "Path": "Media/595125648.wem",
+      "CachePath": "DF/{DF43AD83-0B80-9A43-C7EC-0679B90F313E}.wem"
+     },
+     {
+      "Id": "607370060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_24.wav",
+      "Path": "Media/607370060.wem",
+      "CachePath": "D5/{D55F5A49-30E6-D368-4218-49CDAAC74836}.wem"
+     },
+     {
+      "Id": "613160901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_35.wav",
+      "Path": "Media/613160901.wem",
+      "CachePath": "4F/{4F89AF18-F523-CC68-978F-8E0DD30AB131}.wem"
+     },
+     {
+      "Id": "617043561",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_21.wav",
+      "Path": "Media/617043561.wem",
+      "CachePath": "9D/{9DAA2167-97D7-EDF6-B956-62CDB25BBCDC}.wem"
+     },
+     {
+      "Id": "637855952",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_10.wav",
+      "Path": "Media/637855952.wem",
+      "CachePath": "CD/{CD69BBED-8E52-D347-800A-8D754EABB550}.wem"
+     },
+     {
+      "Id": "677581987",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_02.wav",
+      "Path": "Media/677581987.wem",
+      "CachePath": "88/{88CF2D09-A711-10F4-862F-C69CC7031F74}.wem"
+     },
+     {
+      "Id": "726242483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_22.wav",
+      "Path": "Media/726242483.wem",
+      "CachePath": "80/{804C57D0-C513-BC0B-B3FA-1FA613710EB4}.wem"
+     },
+     {
+      "Id": "730644141",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_09.wav",
+      "Path": "Media/730644141.wem",
+      "CachePath": "30/{30254662-504C-2772-B15A-AF05CF357645}.wem"
+     },
+     {
+      "Id": "822331046",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_13.wav",
+      "Path": "Media/822331046.wem",
+      "CachePath": "48/{483022FD-CFE7-C461-3DC3-F2828C0C9D34}.wem"
+     },
+     {
+      "Id": "858615692",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_18.wav",
+      "Path": "Media/858615692.wem",
+      "CachePath": "7B/{7BDAE753-FA36-406B-049F-2CCFB2F93B7D}.wem"
+     },
+     {
+      "Id": "898971147",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_14.wav",
+      "Path": "Media/898971147.wem",
+      "CachePath": "C7/{C75D8827-9133-B681-5332-206987FE6BD9}.wem"
+     },
+     {
+      "Id": "926927736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_23.wav",
+      "Path": "Media/926927736.wem",
+      "CachePath": "4B/{4B68A3A8-91E8-C1F5-F162-A3633C3F7688}.wem"
+     },
+     {
+      "Id": "960746928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_06.wav",
+      "Path": "Media/960746928.wem",
+      "CachePath": "38/{38EE5CA0-573A-9EFD-2146-29AA82704770}.wem"
+     },
+     {
+      "Id": "1019518861",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_20.wav",
+      "Path": "Media/1019518861.wem",
+      "CachePath": "CE/{CEF5962F-63C9-2E90-2497-2CF598F41BAB}.wem"
+     },
+     {
+      "Id": "1026941228",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SFX_BallLand_33.wav",
+      "Path": "Media/1026941228.wem",
+      "CachePath": "7D/{7DF794BA-3BD5-8B86-6D56-013A00E6CE4F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2501062750",
+      "Name": "Play_BallLand",
+      "ObjectPath": "\\Events\\Default Work Unit\\ForKiera\\Play_BallLand",
+      "GUID": "{0068CC5E-94C6-46CE-8A9D-DE5152E7A1E0}",
+      "Color": "10",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6680272",
+      "DurationMax": "0.6680272",
+      "MediaRefs": [
+       {
+        "Id": "33625350"
+       },
+       {
+        "Id": "46279998"
+       },
+       {
+        "Id": "69407858"
+       },
+       {
+        "Id": "78103090"
+       },
+       {
+        "Id": "103368974"
+       },
+       {
+        "Id": "124083332"
+       },
+       {
+        "Id": "126157330"
+       },
+       {
+        "Id": "127637120"
+       },
+       {
+        "Id": "139144504"
+       },
+       {
+        "Id": "141955767"
+       },
+       {
+        "Id": "150198274"
+       },
+       {
+        "Id": "164228323"
+       },
+       {
+        "Id": "199386930"
+       },
+       {
+        "Id": "238267983"
+       },
+       {
+        "Id": "355660534"
+       },
+       {
+        "Id": "464403998"
+       },
+       {
+        "Id": "482458783"
+       },
+       {
+        "Id": "509966639"
+       },
+       {
+        "Id": "512476426"
+       },
+       {
+        "Id": "537514308"
+       },
+       {
+        "Id": "595125648"
+       },
+       {
+        "Id": "607370060"
+       },
+       {
+        "Id": "613160901"
+       },
+       {
+        "Id": "617043561"
+       },
+       {
+        "Id": "637855952"
+       },
+       {
+        "Id": "677581987"
+       },
+       {
+        "Id": "726242483"
+       },
+       {
+        "Id": "730644141"
+       },
+       {
+        "Id": "822331046"
+       },
+       {
+        "Id": "858615692"
+       },
+       {
+        "Id": "898971147"
+       },
+       {
+        "Id": "926927736"
+       },
+       {
+        "Id": "960746928"
+       },
+       {
+        "Id": "1019518861"
+       },
+       {
+        "Id": "1026941228"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2582146478",
+      "Name": "RTPC_Intensity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Intensity",
+      "GUID": "{D475588C-A84E-4C97-9AA2-1A6D409BBEFF}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{11782A94-F98D-86CA-F482-0F18CBCA01AA}"
+ }
+}
