@@ -560,8 +560,8 @@ We still need to support custom point types so we can use custom audio parameter
 
 > [!exmple] For C#/Unity
 > My preferred approach is to abuse generics.
+> (My gcap 2022 talk on c# generics covered this at length) 
 > 
-> Refer to my previous c# generics talk (<a href=https://cratesmith.github.io/gcap2022>https://cratesmith.github.io/gcap2022</a>)  <br>
 > Just be aware this is not done particularly well the the example source due to time constraints
 <!-- element style="font-size:75%;text-align:left;width:90%"-->
 
