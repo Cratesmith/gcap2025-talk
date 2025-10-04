@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "37544bb48231ee73",
+    "type": "split",
+    "children": [
+      {
+        "id": "377e777fc042ab32",
+        "type": "tabs",
+        "dimension": 29.392764857881136,
+        "children": [
+          {
+            "id": "4e497db05fa72d15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Slides/GCAP 2025 Talk.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "GCAP 2025 Talk"
+            }
+          }
+        ]
+      },
+      {
+        "id": "c5ef2e1ed778a51a",
+        "type": "tabs",
+        "dimension": 70.60723514211887,
+        "children": [
+          {
+            "id": "7094f11b5850efff",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {},
+              "icon": "slides",
+              "title": "Preview: GCAP 2025 Talk.md"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c666062e468f18e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3f52242781c95c0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f8653b1539ccd08",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1e3b72587b28c5d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a2ccc4923b927458",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "36f749fd0ce3f5f5",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3b911b2587c8d06",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48874d078d150b28",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "GCAP 2025 Talk.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for GCAP 2025 Talk"
+            }
+          },
+          {
+            "id": "395dfdfd1e5b0ae1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "GCAP 2025 Talk.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from GCAP 2025 Talk"
+            }
+          },
+          {
+            "id": "85e34dcb8081ea1c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f2312fa1ece51552",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "GCAP 2025 Talk.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of GCAP 2025 Talk"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian42-brat:BRAT": false,
+      "callout-manager:Insert Callout": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "slides-extended:Show slide preview": false
+    }
+  },
+  "active": "4e497db05fa72d15",
+  "lastOpenFiles": [
+    "Slides/tpl-default.md",
+    "Slides/GCAP 2025 Talk.md",
+    "Slides/Untitled",
+    "export/GCAP 2025 Talk/clusters_custom_points_clusters.mp4",
+    "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-04 00-01-35.mp4",
+    "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-57-30.mp4",
+    "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-45-32.mp4",
+    "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-44-05.mp4",
+    "export/GCAP 2025 Talk/WaterRushingDemo GVYRsihvqVI.mp4",
+    "export/GCAP 2025 Talk/Vessel-gameplay-watersounds.mp4",
+    "export/GCAP 2025 Talk/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff",
+    "export/GCAP 2025 Talk/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/sponge.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/whiteboard.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-red.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-yellow.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-white.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-green.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-purple.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-orange.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-blue.png",
+    "export/GCAP 2025 Talk/plugin/chalkboard/img/boardmarker-yellow.png",
+    "export/GCAP 2025 Talk/plugin/menu/README.md",
+    "export/GCAP 2025 Talk/plugin/menu/CONTRIBUTING.md",
+    "export/GCAP 2025 Talk/plugin/customcontrols/README.md",
+    "export/GCAP 2025 Talk/plugin/chart/README.md",
+    "export/GCAP 2025 Talk/plugin/chalkboard/README.md",
+    "export/GCAP 2025 Talk/dist/css/theme/README.md",
+    "test.excalidraw.md",
+    "Drawing.md",
+    "Welcome.md"
+  ]
+}
