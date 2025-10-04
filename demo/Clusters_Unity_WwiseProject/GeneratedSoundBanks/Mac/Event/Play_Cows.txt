@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3349065862	Play_Cows			\Default Work Unit\ForKiera\Play_Cows	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	640949982	Speed			\Default Work Unit\Speed	
+	1832797912	RTPC_PointCount			\Default Work Unit\RTPC_PointCount	
+	2279626901	RTPC_CowsAggravated			\Default Work Unit\RTPC_CowsAggravated	
+

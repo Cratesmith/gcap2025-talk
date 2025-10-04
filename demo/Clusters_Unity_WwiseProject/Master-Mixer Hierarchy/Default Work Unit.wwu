@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5BB621EC-878D-49A3-8196-6F7717F1DED6}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{5BB621EC-878D-49A3-8196-6F7717F1DED6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{47AF699E-4D9A-4927-ACA3-3F8DABA2DB67}" WorkUnitID="{E4275E72-8E46-40D7-8628-1711970D3F31}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="MUS" ID="{CDB49969-F39A-404E-89CD-C45356A51FD7}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="SFX" ID="{B1B933DF-A659-4089-9590-8676CBCA7A5F}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="VO" ID="{85936FD3-57CB-4B52-AB3C-5B6AE89DC867}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{70E26D96-B8F9-48EE-9027-B0312C38283D}" ShortID="762654874">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Peak Limiter (Custom)" ID="{A38295B0-78BE-4AC7-825B-28EB1A403A7D}" ShortID="1014363419" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+														<PropertyList>
+															<Property Name="Threshold" Type="Real32" Value="-6"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

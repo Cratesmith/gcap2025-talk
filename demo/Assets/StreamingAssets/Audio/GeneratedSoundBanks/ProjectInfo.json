@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Clusters_Unity_WwiseProject",
+   "GUID": "{0CB71030-DE0E-4246-8B29-EC7CA475D1DF}",
+   "Generator": "2024.1.8.8893"
+  },
+  "CacheRoot": "../../../../Clusters_Unity_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{800CF28A-79AA-4CA0-B3D4-A87D84B4CFC6}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../Clusters_Unity_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{E3103980-BB79-4B71-B819-D64449DCCE8C}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../Clusters_Unity_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{8A7FEE5D-6B02-4F16-9CF4-295FCF4FFBB8}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{E6E73D19-2D8F-EA2C-2949-E7479AEF01DE}"
+ }
+}

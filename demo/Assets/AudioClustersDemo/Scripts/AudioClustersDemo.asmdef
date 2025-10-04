@@ -1,0 +1,20 @@
+{
+    "name": "AudioClustersDemo",
+    "rootNamespace": "",
+    "references": [
+        "AudioClusters",
+        "AK.Wwise.Unity.API",
+        "AK.Wwise.Unity.MonoBehaviour",
+        "AK.Wwise.Unity.API.WwiseTypes",
+        "Cinemachine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{92C7B148-21B7-444A-9C94-696BD25B15AE}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{92C7B148-21B7-444A-9C94-696BD25B15AE}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Region" ID="{9BFECB35-4784-459E-83F4-6C5DFC213736}">
+					<ChildrenList>
+						<State Name="None" ID="{F6FAFCCA-E0C9-4611-B7F5-E6404B383A47}"/>
+						<State Name="Country" ID="{3E98E2FE-303F-44D9-9DF5-DDF3060728F0}"/>
+						<State Name="Forest" ID="{1DFFC9D1-7520-499B-81B2-CDB7AB2AE86D}"/>
+						<State Name="Country_NoRiding" ID="{5679297C-10AD-4AC5-85EF-618573072F82}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MusicState" ID="{C913E86A-3FDB-4D6D-8959-F96DD188E6C5}">
+					<ChildrenList>
+						<State Name="None" ID="{79084F7C-4491-46FF-B221-88384B088C66}"/>
+						<State Name="GameStart" ID="{90E3FF37-DE06-4B93-87C6-CF0C7467C7D9}"/>
+						<State Name="StopRiding" ID="{71B97583-89F8-434E-8B0D-E4E6C0891E3C}"/>
+						<State Name="RidingFast" ID="{B497EFC6-F4B3-4693-8D11-D1157B0DFAA8}"/>
+						<State Name="ApproachForest" ID="{D439391C-4A4D-4EC2-A7DF-E84775D7D27D}"/>
+						<State Name="DarkForest" ID="{BE370C5C-68C4-4B3C-A3CA-7110B0356310}"/>
+						<State Name="Cutscene" ID="{9A94BFCD-F8D9-418B-B424-F6936F55867C}"/>
+						<State Name="SilentDarkForest" ID="{A0B9975D-37D3-48EF-B4DC-4FF07BB21ED5}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="GameStart" ID="{90E3FF37-DE06-4B93-87C6-CF0C7467C7D9}"/>
+							<EndState Name="StopRiding" ID="{71B97583-89F8-434E-8B0D-E4E6C0891E3C}"/>
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="DarkForest" ID="{BE370C5C-68C4-4B3C-A3CA-7110B0356310}"/>
+							<EndState Name="Cutscene" ID="{9A94BFCD-F8D9-418B-B424-F6936F55867C}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

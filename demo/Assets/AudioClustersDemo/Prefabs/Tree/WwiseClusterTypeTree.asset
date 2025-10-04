@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc5dc7d766e40108b2b9b483924d0e8, type: 3}
+  m_Name: WwiseClusterTypeTree
+  m_EditorClassIdentifier: 
+  m_ClusterPrefab: {fileID: 7012506313633207584, guid: 7045185e11859be489abaade290392b8, type: 3}
+  <CaptureRadiusListenerAngle>k__BackingField: 22
+  <CaptureRadiusMinAttenuationDistance>k__BackingField: 5
+  <CaptureRadiusMinChangeAngle>k__BackingField: 7
+  <MaxClusters>k__BackingField: 10
+  <CullingDistance>k__BackingField: 50
+  <CullingDistanceSpareClusterCount>k__BackingField: 2
+  <CullingDistanceRestoreRateAngle>k__BackingField: 5
+  <DebugColor>k__BackingField: {r: 0, g: 0.07410216, b: 1, a: 1}
+  <PointBlendDuration>k__BackingField: 2
+  <PointBlendDurationOutOfClustersMultiplier>k__BackingField: 0.5
+  ClusterAkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 35b55f8f3aa31194c9e777aa6f33ffc5, type: 2}
+  PointCountRtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8d58586b11a986149bef98280e55a2c4, type: 2}
