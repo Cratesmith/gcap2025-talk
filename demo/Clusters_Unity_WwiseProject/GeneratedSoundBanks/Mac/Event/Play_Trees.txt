@@ -1,7 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	767397161	Play_Trees			\Default Work Unit\ForKiera\Play_Trees	
-
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	262290038	RTPC_Distance			\Default Work Unit\RTPC_Distance	
-	1832797912	RTPC_PointCount			\Default Work Unit\RTPC_PointCount	
-
