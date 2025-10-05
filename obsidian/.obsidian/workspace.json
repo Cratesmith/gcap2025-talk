@@ -6,7 +6,7 @@
       {
         "id": "377e777fc042ab32",
         "type": "tabs",
-        "dimension": 29.392764857881136,
+        "dimension": 55.11727078891258,
         "children": [
           {
             "id": "4e497db05fa72d15",
@@ -25,12 +25,12 @@
         ]
       },
       {
-        "id": "c5ef2e1ed778a51a",
+        "id": "7874a5b11e44f805",
         "type": "tabs",
-        "dimension": 70.60723514211887,
+        "dimension": 44.882729211087415,
         "children": [
           {
-            "id": "7094f11b5850efff",
+            "id": "bd616b1027738a9b",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -112,8 +112,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GCAP 2025 Talk.md",
-                "collapseAll": false,
+                "file": "Slides/GCAP 2025 Talk.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -193,18 +193,18 @@
   },
   "active": "4e497db05fa72d15",
   "lastOpenFiles": [
-    "Slides/tpl-default.md",
+    "clusters_dynamic_culling_distance.mp4",
     "Slides/GCAP 2025 Talk.md",
+    "clusters_culling.mp4",
+    "clusters_distance_based_capture_radius.mp4",
+    "clusters_interpolation.mp4",
+    "clusters_custom_points_clusters.mp4",
+    "Slides/tpl-default.md",
     "Slides/Untitled",
     "export/GCAP 2025 Talk/clusters_custom_points_clusters.mp4",
     "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-04 00-01-35.mp4",
     "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-57-30.mp4",
     "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-45-32.mp4",
-    "export/GCAP 2025 Talk/Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-44-05.mp4",
-    "export/GCAP 2025 Talk/WaterRushingDemo GVYRsihvqVI.mp4",
-    "export/GCAP 2025 Talk/Vessel-gameplay-watersounds.mp4",
-    "export/GCAP 2025 Talk/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff",
-    "export/GCAP 2025 Talk/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff",
     "export/GCAP 2025 Talk/plugin/chalkboard/img/sponge.png",
     "export/GCAP 2025 Talk/plugin/chalkboard/img/whiteboard.png",
     "export/GCAP 2025 Talk/plugin/chalkboard/img/chalk-red.png",

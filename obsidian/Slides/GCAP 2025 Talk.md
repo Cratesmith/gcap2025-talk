@@ -1,7 +1,7 @@
 ---
 notesSeparator: SPEAKER_NOTES
 width: "1440"
-height: "1080"
+height: "1200"
 timeForPresentation: 3000
 defaultTemplate: "[[tpl-default]]"
 ---
@@ -12,29 +12,36 @@ Dynamic audio clustering
 
 ---
 # Introduction
+> [!info] Navigation: These slides are on a grid
+> Go down to get to the next slide in a section
+> 
+> Go right to get to the next section
+<!-- element style="font-size:50%;text-align:left;width:60%"-->
 
 --
 ## Who I am
 
 > [!error] Kiera Lord  (@Cratesmith)  
-> Officially: Senior Gameplay Programmer @ Gameloft Brisbane
-<!-- element style="font-size:50%""-->
-
+> Senior Gameplay Programmer @ Gameloft Brisbane
+> 
+> Queer, trans, heavily austistic, generalist developer  
+<!-- element style="font-size:75%;width:60%"-->
 --
 ### Some stuff I've done
+Not an exaustive list. But it gets across I've been doing this for a while now.
 
 -  PS2/XB: **Destroy All Humans 2**
 -  360/PS3: **The Dark Knight (Unreleased)**
 -  Wii: **Next big thing (Unreleased)**
 -  Web: **Alternator**
--  PC/PS3: **Vessel**
+-  PC/PS3: **Vessel** <!-- element style="color:cyan""-->
 -  iOS/Droid: **Sim Cell**
 -  iOS/Droid: **Codebreakers**
 -  PC/Mac: **Kinect & VR support for Tail Drift**
 -  GearVR: **Small**  **(unreleased)**
 -  Cardboard: **RACQ Bike VR**
 -  GearVR: **Zombie Nom Nom**
--  Switch/PS4/Xbone: **Windbound
+-  Switch/PS4/Xbone: **Windbound**
 -  PC: **Cosy Caravan**
 
 --
@@ -50,7 +57,12 @@ Dynamic audio clustering
 * This presentation is an introduction, with the slides/demo/recordings/source code containing more detail that you can refer to later.
 <br/>
 * Some parts of this talk will be a bit rough. There really wasn't enough time to finish the demo I wanted to prepare AND redesign this talk to fit in the audio track.
-  
+
+--
+
+## Moving on
+Lets get this started shall we? 
+
 ---
 # The problem we're trying to solve
 
@@ -58,13 +70,15 @@ Dynamic audio clustering
 
 ## Volumetric audio is hard
 
-* It's where we have -lots- of things that need to make sounds
+* It's where we want an area to play a sound as if it occupies an area, or we're playing a sound to represent many things in an area.
+
 * Some examples:
-	* Liquid simulation sounds
-	* Spatial ambience from foliage
+	* Liquid simulations
+	* Ambience for dense foliage
 	* Sounds for crowds/traffic/mass characters
+	* Large numbers of collision or impact sounds
 <br/>
-* We can't just play more sounds to get around this problem.
+* We can't just play more sounds to fill the space/for each point.
 	* We'd use up cpu/memory/available voices
 	* It'd sound terrible due to phasing/destructive interference etc.
 <br/>
@@ -80,15 +94,13 @@ Dynamic audio clustering
 * We give that sound a parameter for "number of things" so the sound can change depending on how many their are (plus any other parameters the sound needs)
 <br/>
 * A good example of this is bullet impact sounds from a minigun. If we played a unique sound for each hit... it wouldn't be great. But we could play a sound at the position of several hits with a parameter for "how many bullets was that"
-<br/>
-* Auditory stream segregation: how our brains group sounds. (orchestra example)  
 
 --
 
  ## The theory behind this 
-
+ 
 Auditory stream segregation
-* When we can tell sounds apart VS when our brains group sounds together.
+<br>When we can tell sounds apart VS when our brains group sounds together.
 * Different factors contribute to how likely we will notice (or segregate) a sound.
 	* Rate of change (especially sudden changes)
 	* Directionality
@@ -106,7 +118,59 @@ Auditory stream segregation
 
 ## Moving on
 
-Lets look at a relatively simple, if limited way to do this
+Or... back 15 years
+
+---
+
+# Lets talk about VESSEL
+
+--
+
+## VESSEL
+
+![Video|1000](Vessel-gameplay-watersounds.mp4)
+
+* I worked on Vessel back in 2009.
+* Like all games at the time it was a puzzle platformer with a unique mechanic: particle-based liquid physics simulation (and characters)
+* Ran on a custom c++ engine with fmod 
+* One of my first tasks was finding a way to play reactive sounds for all that liquid.
+--
+
+## Types of liquid sounds
+
+We had 3 types of sounds made from clusters of points
+* Liquid collision (water hitting solid surfaces)
+* Liquid "rushing" (any water particles moving / under sufficient pressure)
+* Liquid "fusion" (contact points where two liquids combined to form another, such as lava + water = steam) 
+
+--
+
+## How we approached it
+Basically the approach from a few slides back
+* Store points where these events occured in lists based on their liquid & sound type combination.
+  
+* Remove points after a certain time (usually 0.5s)
+  
+* Cluster (group) points together by proximity
+  
+* Play sounds from clusters that are close to the player to represent those points
+
+--
+
+## Liquid sound parameters
+
+![[WaterRushingDemo GVYRsihvqVI.mp4|1000]]
+* Clusters would send and constantly update audio parameters based on their points
+  
+* Each sound type was parameterized with
+	* a "drop_count" parameter for the number of points in the cluster 
+	* several unique parameters for each sound type, using averaged values from the cluster's points
+
+
+--
+
+## Moving on
+Let's give this method a name and go over how it works
 
 ---
 # Worldspace Clustering
@@ -122,43 +186,14 @@ Lets look at a relatively simple, if limited way to do this
 <!-- element style="font-size:75%;text-align:left;width:90%"-->
 
 > [!fail] Bad for
-> Distant ambience in 3D games (requires an unreasonable number)
+> Perspective 3D games (needs far too many clusters to play sounds distant to the listener)
 > 
 > Avoiding noticeable spatialization issues (If listener is very close to the cluster and can tell it's coming from a specific spot)
 <!-- element style="font-size:75%;text-align:left;width:90%"-->
 
 
 --
-
-### Example: Water sounds in VESSEL
-
-![Video|1000](Vessel-gameplay-watersounds.mp4)
-
-* I worked on Vessel back in 2009.
-* Like all games at the time it was a puzzle platformer with a unique mechanic: particle-based liquid physics simulation (and characters)
-* One of my first tasks was finding a way to play reactive sounds for all that liquid.
---
-
-### VESSEL: Types of clustered sounds
-
-We had 3 types of sounds made from clusters of points
-* Liquid collision (contact points from water hitting surfaces, stored for 0.5s)
-* Liquid "rushing" (any water particles moving / under sufficient pressure)
-* Liquid "fusion" (contact points where two liquids combined to form another, such as lava + water = steam, stored for 0.5s) 
-
---
-### VESSEL: Sound parameters
-
-![[WaterRushingDemo GVYRsihvqVI.mp4|1000]]
-* Sounds were made by clustering (grouping) these points based on proximity
-  
-* These clusters acted as sound emitters for all their points.
-  
-* Each sound type was parameterized with a "drop_count" parameter for the number of points, as well as some additional parameters depending on the sound type 
-
---
-
-### Early Sound design considerations
+###  Sound design considerations
 Clusterable sounds seem to mostly fall into two categories
 
 * Continuous/Looping sounds where fading in/out instances of the sound at different playback times isn't noticeable.
@@ -168,7 +203,7 @@ Clusterable sounds seem to mostly fall into two categories
 
 --
 
-### Early Sound design considerations - Continuous Sounds
+### Sound design considerations - Continuous Sounds
 
 * These sounds spatialize really well.
 
@@ -177,11 +212,11 @@ Clusterable sounds seem to mostly fall into two categories
 
 --
 
-### Early Sound design considerations - Impact sounds
+### Sound design considerations - Impact sounds
 
-* In these cases we store short lived points where collisions occurred, and use clustering to merge multiple small "hits" into one bigger one.
+* In these cases we store short lived points where impact events occurred, and use clustering to merge multiple small "hits" into one bigger one.
 
-* This isn't as impressive as the looping sounds, but it does handle large numbers of impacts better than limiting voice count, or cooldown timers.
+* Doesn't show off spatialization as well as the looping sounds, but it does handle large numbers of impacts better than limiting voice count, or cooldown timers.
   
 * These sounds have a few complexities though
 	* They need to use custom clusters that play a new sound if points are added, with a configurable minimum time between starting sounds
@@ -197,24 +232,41 @@ It's going to get complicated for a bit.
 
 --
 
-### The method: Lets define some terms
+### The method: Lets define some terms 1
 
 * Cluster type:<br> Definition & settings for a kind of parameterized sound which can take a "point count" parameter.
  <br><br>
 * Point: <br>A position (and other data) we want to play a cluster type's sound from.  
 	* Can be assigned to a single cluster at a time.
 <br><br>
+ * Source:<br> An object in the game that provides points. Also provides a bounding volume that those points will be inside
+<br><br> 
 * Cluster:<br> A dynamically spawned sound emitter, representing multiple 'points'. 
 	* Always located at the average position of the points assigned to it.
-<br><br>
-	  
+<br><br>	  
 * Capture Radius:<br> The maximum distance a point can be from the cluster without being unassigned from it.
 
 --
 
+### The method: Lets define some terms 2
+
+ <br><br>
+* Spatialization:<br>Binaural directionality for positional sounds (as opposed to mono or stereo pan). 
+ <br><br>
+* Listener:<br>The position & rotation that audio direction is relative to (usually the camera) 
+ <br><br>
+* Attenuation origin:<br>The position attenuation (distance falloff) is relative to. 
+	* Usually same as the listener position first person
+	* Usually the player character/camera focus in 3rd person
+	* AKA "Distance probe" in Wwise / "Attenuation override" in Unreal 
+	* Not provided by unity's in-built audio, but you can add it pretty easily
+
+--
+
 ###  The method - Capture Radius
-<br>
-In this method a cluster's "capture radius" is relative to the number of points assigned to the cluster:
+
+In this method a cluster's "capture radius" is relative to the number of points assigned to the cluster:  <!-- element style="text-align:justify;"-->
+
 * it increases with more points, shrinks with less points
 <br><br>  
 * there is a configurable minimum radius
@@ -227,7 +279,7 @@ In this method a cluster's "capture radius" is relative to the number of points 
 
 ###  The method - 1-3
 
-> [!example] 1. Re-position and update "capture radius" of clusters with changed points
+> [!example] 1. Re-position clusters with changed points
 >  This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
 <!-- element style="font-size:75%;text-align:left;"-->
 
@@ -301,7 +353,26 @@ Let's to move onto the new stuff
 
 ---
 
-# Perception based 3D clustering 
+# Perspective clustering 
+
+--
+
+### What perspective clustering is/isn't good for
+
+> [!check] Good for
+> 3D games (with perspective projection)
+> 
+> Automatic & seamless transition of far ambience to near (or per object) ambience. 
+> 
+> Point cloud defined volumetric sounds (eg, particle effects)
+<!-- element style="font-size:75%;text-align:left;width:90%"-->
+
+> [!fail] Bad for
+> Higher performance overhead than worldspace clustering
+> 
+> Implementation time & complexity
+<!-- element style="font-size:75%;text-align:left;width:90%"-->
+
 
 --
 
@@ -309,7 +380,7 @@ Let's to move onto the new stuff
 :::<!-- element style="font-size:150%;text-align:center "-->
 <!-- slide style="font-size:75%;text-align:left"-->
 
-![video|1200](Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-44-05.mp4)
+![video|1200](clusters_distance_based_capture_radius.mp4)
 :::<!-- element style="text-align:center "-->
 
 * We basically want to cluster sounds as much as we can *without* the player noticing, so it makes sense to base the method on stream segregation factors.
@@ -347,8 +418,7 @@ Let's to move onto the new stuff
 	* shrink to a minimum value if the Attenuation origin (3rd person character) approaches the cluster.
 	* still shrink to zero as the Listener (camera) approaches the cluster
 <br><br>
-* This really cuts down on the number of clusters needed, and doesn't have a negative impact as the player is very unlikely to notice that the distance fade is slightly incorrect if they're this close to a cluster.
-
+* This prevents clusters getting too small (and therefore using more clusters) in a case where there really isn't a benefit to doing so.
 --
 
 ## Changes to the previous method
@@ -397,7 +467,7 @@ The method is almost identical, however we'll need to add several new features o
 
 ## Moving On... What else is needed?
 
-Unfortunately the cluster radius change adds a lot of new edge cases 
+Unfortunately the cluster radius change adds a lot of new edge cases.<br>We'll need to add these feature to resolve them. 
 
 > [!Example] Point weight interpolation
 > Sounds teleporting their location happens lot more now and will be very noticable.
@@ -425,7 +495,7 @@ Unfortunately the cluster radius change adds a lot of new edge cases
 
 ## Interpolation?
 
-![[Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-45-32.mp4]]
+![[clusters_interpolation.mp4]]
 :::<!-- element style="font-size:150%;text-align:center "-->
 <!-- slide style="font-size:75%;text-align:left"-->
 
@@ -480,7 +550,8 @@ We still need to cull points
 --
 
 ## Culling?
-![](Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-03 23-57-30.mp4)
+
+![](clusters_culling.mp4)
 :::<!-- element style="font-size:150%;text-align:center "-->
 <!-- slide style="font-size:75%;text-align:left"-->
 
@@ -513,11 +584,10 @@ We still need to cull points
 
 --
 
-:::
 ## Dynamic culling distance
 
-![video|1000](Clusters_Unity - Main - Windows, Mac, Linux - Unity 2022.3.6f1_ _DX11_ 2025-10-04 00-01-35.mp4)
-:::
+![video|1000](clusters_dynamic_culling_distance.mp4)
+
 * The other thing we need from culling is to allow us to prioritize using clusters close to the attenuation origin if we don't have enough clusters for all nearby points.
 
 * To do this we simply remove the most distant cluster entirely by reducing the culling distance if we run out of clusters during an update.
@@ -693,6 +763,8 @@ Damn that was a lot of words
 ---
 
 # Debrief / Final Q&A
+
+Thanks for listening!
 
 > [!error] Special thanks to Ella Van Dyck
 > Iterated on this system with me and also provided the sounds used in this demo
