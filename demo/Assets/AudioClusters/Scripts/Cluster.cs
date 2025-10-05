@@ -242,7 +242,7 @@ namespace AudioClusters
 				{
 #if VERIFY_CLUSTER_LOGIC
 					var averagingError = (newClusterPosition - CalcAveragePointPosition()).magnitude;
-					if (averagingError > 0.00001f)
+					if (averagingError > 1.0e-4f)
 					{
 						Debug.LogWarning($"Cluster::AddOrUpdatePoint - position error average is high {averagingError}");
 					}
