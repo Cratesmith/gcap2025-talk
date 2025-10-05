@@ -759,7 +759,40 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 </div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1440px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-###  The method - 1-3
+###  The method - 0-3
+
+<div class="callout callout-color1" data-type="info">
+<div class="callout-title">
+<div class="callout-icon">
+<i class="fas fa-info-circle" ></i>
+
+</div>
+<div class="callout-title-inner">
+Cluster "capture radius" and position is updated whenever points are added or removed from them
+</div>
+</div>
+<div class="callout-content">
+This is because we need clusters to be correct at every step of the process
+</div>
+</div>
+<!-- .element: style="font-size: 75%; text-align: left" -->
+
+<div class="callout callout-color8" data-type="example">
+<div class="callout-title">
+<div class="callout-icon">
+<i class="fas fa-list" ></i>
+
+</div>
+<div class="callout-title-inner">
+0. Collect changed points from source objects 
+</div>
+</div>
+<div class="callout-content">
+The demo has points sent in by objects themselves polling changed points in this step
+But after trying both approaches I recommend doing it here instead.
+</div>
+</div>
+<!-- .element: style="font-size: 75%; text-align: left" -->
 
 <div class="callout callout-color8" data-type="example">
 <div class="callout-title">
@@ -775,8 +808,7 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
-
+<!-- .element: style="font-size: 75%; text-align: left; width: 95%" -->
 
 <div class="callout callout-color8" data-type="example">
 <div class="callout-title">
@@ -1137,9 +1169,9 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 
 ## Changes to the previous method
 
-In this method a cluster's "capture radius" is a factor of distance from the listener/attenuation origin.
+The main difference in this method is the cluster's "capture radius" being a factor  of distance.
 
-The method is almost identical, however we'll need to add several new features once we've updated the method in order to handle all the edge cases of this change.
+However we'll need to add several new steps to handle the edge cases from this change, and the change to working in perspective 3D.
 
 
 <div class="" style="position: absolute; left: 0%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
@@ -1156,7 +1188,22 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 </div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1440px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-###  The method - 1-4
+###  The method - 0-3
+<div class="callout callout-color1" data-type="info">
+<div class="callout-title">
+<div class="callout-icon">
+<i class="fas fa-info-circle" ></i>
+
+</div>
+<div class="callout-title-inner">
+Cluster "capture radius" and position is updated whenever points are added or removed from them<br>OR the listener / attenuation origin has moved
+</div>
+</div>
+<div class="callout-content">
+This is because we need clusters to be correct at every step of the process
+</div>
+</div>
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
 
 <div class="callout callout-color9" data-type="quote">
 <div class="callout-title">
@@ -1165,31 +1212,47 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 
 </div>
 <div class="callout-title-inner">
-1. Re-position and update "capture radius" of clusters with changed points
+0. Collect changed points from source objects 
 </div>
 </div>
 <div class="callout-content">
-This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
+The demo has points sent in by objects themselves polling changed points in this step
+But after trying both approaches I recommend doing it here instead.
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
 
-
-<div class="callout callout-color8" data-type="example">
+<div class="callout callout-color8" data-type="Example">
 <div class="callout-title">
 <div class="callout-icon">
 <i class="fas fa-list" ></i>
 
 </div>
 <div class="callout-title-inner">
-2. [NEW STEP!] Update "capture radius" of clusters if they have moved, or if the minimum distance to the listener/attenuation origin has changed.
+1. Cull any points outside the cluster radius
+</div>
+</div>
+<div class="callout-content">
+This is to ensure that we only are processing points within the cluster radius.
+</div>
+</div>
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
+
+<div class="callout callout-color9" data-type="quote">
+<div class="callout-title">
+<div class="callout-icon">
+<i class="fas fa-quote-left" ></i>
+
+</div>
+<div class="callout-title-inner">
+2. Re-position clusters with changed points
 </div>
 </div>
 <div class="callout-content">
 This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
 
 <div class="callout callout-color9" data-type="quote">
 <div class="callout-title">
@@ -1205,7 +1268,24 @@ This is to ensure clusters of moved points are in the correct locations before w
 This covers cases where the cluster or point has moved and is no longer close enough to belong to it's current cluster
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
+
+
+<div class="" style="position: absolute; left: 0%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Slides: https://cratesmith.github.io/gcap2025-talk
+<!-- .element: style="font-size: 50%" "="true" -->
+</div>
+
+<div class="" style="position: absolute; left: 40%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example Source: https://github.com/Cratesmith/gcap2025-talk
+<!-- .element: style="font-size: 50%" "="true" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1440px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+###  The method - 4-8
 
 <div class="callout callout-color9" data-type="quote">
 <div class="callout-title">
@@ -1221,24 +1301,7 @@ This covers cases where the cluster or point has moved and is no longer close en
 This creates any needed clusters and ensures as many points are clustered as possible, but we may still have overlapping clusters
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
-
-
-<div class="" style="position: absolute; left: 0%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-Slides: https://cratesmith.github.io/gcap2025-talk
-<!-- .element: style="font-size: 50%" "="true" -->
-</div>
-
-<div class="" style="position: absolute; left: 40%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-Example Source: https://github.com/Cratesmith/gcap2025-talk
-<!-- .element: style="font-size: 50%" "="true" -->
-</div>
-</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1440px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-###  The method - 5-7
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
 
 <div class="callout callout-color9" data-type="quote">
 <div class="callout-title">
@@ -1254,39 +1317,57 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 This eliminates clusters that are completely overlapped. I experimented with merging any overlapped point but results weren't better and it added a lot of complexity
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
 
-<div class="callout callout-color9" data-type="quote">
+<div class="callout callout-color8" data-type="Example">
 <div class="callout-title">
 <div class="callout-icon">
-<i class="fas fa-quote-left" ></i>
+<i class="fas fa-list" ></i>
 
 </div>
 <div class="callout-title-inner">
-6. Fade out sound for clusters that have no points, and destroy any clusters with no points that have fully faded out.
+6. Interpolate point weights 
 </div>
 </div>
 <div class="callout-content">
-This is how clusters are removed
+This allows us to interpolate the clusters audio emitter locations and audio parameters (this is done during the "cluster refresh" step
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left" -->
 
-<div class="callout callout-color9" data-type="quote">
+
+<div class="callout callout-color8" data-type="example">
 <div class="callout-title">
 <div class="callout-icon">
-<i class="fas fa-quote-left" ></i>
+<i class="fas fa-list" ></i>
 
 </div>
 <div class="callout-title-inner">
-7. "Refresh" each changed cluster: starting the cluster's sound emitter and moving it to the the cluster's position, setting "point count" audio parameter as well as any custom ones.
+7. Destroy any clusters with no points AND zero total point weight
+</div>
+</div>
+<div class="callout-content">
+This is how clusters are removed. Fading is now handled by interpolation
+</div>
+</div>
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
+
+<div class="callout callout-color8" data-type="example">
+<div class="callout-title">
+<div class="callout-icon">
+<i class="fas fa-list" ></i>
+
+</div>
+<div class="callout-title-inner">
+8. "Refresh" each changed cluster: starting the cluster's sound emitter, apply point weights to audio emitter location & sound parameters and send them to the audio engine.
 </div>
 </div>
 <div class="callout-content">
 This is when the cluster interprets data from its points and communicates this to the audio engine.
 </div>
 </div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
+<!-- .element: style="font-size: 70%; text-align: left; width: 95%" -->
+
 
 <div class="" style="position: absolute; left: 0%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
@@ -1302,63 +1383,10 @@ Example Source: https://github.com/Cratesmith/gcap2025-talk
 </div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1440px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## Moving On... What else is needed?
+## Moving On... 
 
-Unfortunately the cluster radius change adds a lot of new edge cases.<br>We'll need to add these feature to resolve them. 
+Lets look into how those extra steps work, and also how we can support custom audio parameters
 
-<div class="callout callout-color8" data-type="Example">
-<div class="callout-title">
-<div class="callout-icon">
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-Point weight interpolation
-</div>
-</div>
-<div class="callout-content">
-Sounds teleporting their location happens lot more now and will be very noticable.
-
-So we need a way to interpolate out the direction & volume jumps caused by reassigning points between clusters.
-</div>
-</div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
-
-<div class="callout callout-color8" data-type="Example">
-<div class="callout-title">
-<div class="callout-icon">
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-Culling
-</div>
-</div>
-<div class="callout-content">
-It's easier to have large numbers of points in 3D worlds, so we need to efficiently distance cull points without the player noticing.
-
-We also need a way to ensure that if we hit our limit of clusters for any sound type, those clusters are used for sounds close to the player.
-</div>
-</div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
-
-
-<div class="callout callout-color8" data-type="Example">
-<div class="callout-title">
-<div class="callout-icon">
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-Custom point data / Custom audio parameters
-</div>
-</div>
-<div class="callout-content">
-Finally as this will get quite complicated, we can't rebuild this system for each new type of sound that has different parameters. It needs to be able to take custom per-point data and turn that into custom per-sound behaviour & audio parameters.
-</div>
-</div>
-<!-- .element: style="font-size: 75%; text-align: left" -->
- 
 
 <div class="" style="position: absolute; left: 0%; top: 100%; height: 0%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 

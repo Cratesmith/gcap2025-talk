@@ -277,12 +277,20 @@ In this method a cluster's "capture radius" is relative to the number of points 
 
 --
 
-###  The method - 1-3
+###  The method - 0-3
+
+> [!info] Cluster "capture radius" and position is updated whenever points are added or removed from them
+>  This is because we need clusters to be correct at every step of the process
+<!-- element style="font-size:75%;text-align:left"-->
+
+> [!example] 0. Collect changed points from source objects 
+> The demo has points sent in by objects themselves polling changed points in this step
+> But after trying both approaches I recommend doing it here instead.
+<!-- element style="font-size:75%;text-align:left"-->
 
 > [!example] 1. Re-position clusters with changed points
 >  This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
-<!-- element style="font-size:75%;text-align:left;"-->
-
+<!-- element style="font-size:75%;text-align:left;width:95%"-->
 
 > [!example] 2. Unassign any points that are outside the "capture radius" of the cluster they are assigned to.
 > This covers cases where the cluster or point has moved and is no longer close enough to belong to it's current cluster
@@ -423,69 +431,65 @@ Let's to move onto the new stuff
 
 ## Changes to the previous method
 
-In this method a cluster's "capture radius" is a factor of distance from the listener/attenuation origin.
+The main difference in this method is the cluster's "capture radius" being a factor  of distance.
 
-The method is almost identical, however we'll need to add several new features once we've updated the method in order to handle all the edge cases of this change.
+However we'll need to add several new steps to handle the edge cases from this change, and the change to working in perspective 3D.
 
 --
 
-###  The method - 1-4
+###  The method - 0-3
+> [!info] Cluster "capture radius" and position is updated whenever points are added or removed from them<br>OR the listener / attenuation origin has moved
+>  This is because we need clusters to be correct at every step of the process
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
 
-> [!quote] 1. Re-position and update "capture radius" of clusters with changed points
+> [!quote] 0. Collect changed points from source objects 
+> The demo has points sent in by objects themselves polling changed points in this step
+> But after trying both approaches I recommend doing it here instead.
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
+
+> [!Example] 1. Cull any points outside the cluster radius
+> This is to ensure that we only are processing points within the cluster radius. 
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
+
+> [!quote] 2. Re-position clusters with changed points
 >  This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
-<!-- element style="font-size:75%;text-align:left;"-->
-
-
- > [!example] 2. [NEW STEP!] Update "capture radius" of clusters if they have moved, or if the minimum distance to the listener/attenuation origin has changed.
-> This is to ensure clusters of moved points are in the correct locations before we assign points to clusters
-<!-- element style="font-size:75%;text-align:left;"-->
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
 
 > [!quote] 3. Unassign any points that are outside the "capture radius" of the cluster they are assigned to.
 > This covers cases where the cluster or point has moved and is no longer close enough to belong to it's current cluster
-<!-- element style="font-size:75%;text-align:left"-->
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
+
+--
+
+###  The method - 4-8
 
 > [!quote] 4. Assign points to existing clusters they are within the "capture radius" of, or create new clusters to assign them to if that fails.
 > This creates any needed clusters and ensures as many points are clustered as possible, but we may still have overlapping clusters
-<!-- element style="font-size:75%;text-align:left"-->
-
---
-
-###  The method - 5-7
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
 
 > [!quote] 5. Merge smaller clusters into larger clusters who's "capture radius" fully overlaps all their points.
 > This eliminates clusters that are completely overlapped. I experimented with merging any overlapped point but results weren't better and it added a lot of complexity
-<!-- element style="font-size:75%;text-align:left"-->
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
 
-> [!quote] 6. Fade out sound for clusters that have no points, and destroy any clusters with no points that have fully faded out.
-> This is how clusters are removed
-<!-- element style="font-size:75%;text-align:left"-->
+> [!Example] 6. Interpolate point weights 
+> This allows us to interpolate the clusters audio emitter locations and audio parameters (this is done during the "cluster refresh" step
+<!-- element style="font-size:70%;text-align:left"-->
 
-> [!quote] 7. "Refresh" each changed cluster: starting the cluster's sound emitter and moving it to the the cluster's position, setting "point count" audio parameter as well as any custom ones.
+
+> [!example] 7. Destroy any clusters with no points AND zero total point weight
+> This is how clusters are removed. Fading is now handled by interpolation
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
+
+> [!example] 8. "Refresh" each changed cluster: starting the cluster's sound emitter, apply point weights to audio emitter location & sound parameters and send them to the audio engine.
 > This is when the cluster interprets data from its points and communicates this to the audio engine.
-<!-- element style="font-size:75%;text-align:left"-->
+<!-- element style="font-size:70%;text-align:left;width:95%"-->
+
 --
 
-## Moving On... What else is needed?
+## Moving On... 
 
-Unfortunately the cluster radius change adds a lot of new edge cases.<br>We'll need to add these feature to resolve them. 
+Lets look into how those extra steps work, and also how we can support custom audio parameters
 
-> [!Example] Point weight interpolation
-> Sounds teleporting their location happens lot more now and will be very noticable.
-> 
-> So we need a way to interpolate out the direction & volume jumps caused by reassigning points between clusters. 
-<!-- element style="font-size:75%;text-align:left"-->
-
-> [!Example] Culling
-> It's easier to have large numbers of points in 3D worlds, so we need to efficiently distance cull points without the player noticing.
-> 
-> We also need a way to ensure that if we hit our limit of clusters for any sound type, those clusters are used for sounds close to the player.
-<!-- element style="font-size:75%;text-align:left"-->
-
-
-> [!Example] Custom point data / Custom audio parameters
- > Finally as this will get quite complicated, we can't rebuild this system for each new type of sound that has different parameters. It needs to be able to take custom per-point data and turn that into custom per-sound behaviour & audio parameters.
-<!-- element style="font-size:75%;text-align:left"-->
- 
 ---
 
 # Point-Weight based Interpolation 
